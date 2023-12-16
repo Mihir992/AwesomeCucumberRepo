@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="0" passed="0" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-30T12:58:39Z" name="Default suite" finished-at="2023-09-30T12:59:24Z" duration-ms="44960">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:awesomecucumber.runners.TestNGRunnerTest@5a5a729f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-09-30T12:58:39Z" name="Default test" finished-at="2023-09-30T12:59:24Z" duration-ms="44960">
+      <class name="awesomecucumber.runners.TestNGRunnerTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:awesomecucumber.runners.TestNGRunnerTest@5a5a729f]" started-at="2023-09-30T18:28:39Z" name="setUpClass" finished-at="2023-09-30T18:29:03Z" duration-ms="24530" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@cdc3aae]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:awesomecucumber.runners.TestNGRunnerTest@5a5a729f]" started-at="2023-09-30T18:29:03Z" name="tearDownClass" finished-at="2023-09-30T18:29:24Z" duration-ms="20299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- awesomecucumber.runners.TestNGRunnerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
