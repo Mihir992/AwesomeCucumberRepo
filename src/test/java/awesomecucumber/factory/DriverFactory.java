@@ -2,31 +2,30 @@ package awesomecucumber.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
-	private static WebDriver driver;
+	//private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	
-	public static WebDriver initializeDriver() {
+	public static WebDriver initializeDriver(String browser) {
+		WebDriver driver;
 		//WebDriverManager.chromedriver().setup();
-		//System.setProperty("webdriver.chromer.driver","C:\\Users\\admin\\eclipseworkspace\\eCommerce\\Driver\\chromedriver.exe");
-		/*ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifcations");
-		options.addArguments("--disable-gpu");
-		options.addArguments("--disable-extensions");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--disable-dev-shm-usage");
-		options.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(options);
-		driver.get("https://www.google.com/");*/
-		driver = new ChromeDriver();
+		switch(browser) 
+		{
+			 case "chrome": {
+				 WebDriverManager.chromedriver().setup();
+				 driver = new ChromeDriver();
+			 }
+			 case "firefox":{
+				 WebDriverManager.firefoxdriver().setup();
+				 driver = new FirefoxDriver();
+			 }
+			 default:
+				 throw new IllegalStateException("INVALID BROWSER: " + browser);
+		}
 		driver.manage().window().maximize();
-		return driver;
-	}
-	
-	public static WebDriver getDriver() {
 		return driver;
 	}
 }
