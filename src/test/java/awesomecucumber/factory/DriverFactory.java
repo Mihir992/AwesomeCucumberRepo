@@ -17,10 +17,12 @@ public class DriverFactory {
 			 case "chrome": {
 				 WebDriverManager.chromedriver().setup();
 				 driver = new ChromeDriver();
+				 break;
 			 }
 			 case "firefox":{
 				 WebDriverManager.firefoxdriver().setup();
 				 driver = new FirefoxDriver();
+				 break;
 			 }
 			 default:
 				 throw new IllegalStateException("INVALID BROWSER: " + browser);
